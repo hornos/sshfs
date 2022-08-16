@@ -2647,7 +2647,7 @@ static int sshfs_fsync(const char *path, int isdatasync,
 	int err;
 	(void) isdatasync;
 
-	if ((err = sshfs_flush(path, fi)))
+	if (err = sshfs_flush(path, fi))
 		return err;
 
 	if (!sshfs.ext_fsync)
@@ -3961,7 +3961,7 @@ int main(int argc, char *argv[])
 	}
 #endif /* __APPLE__ */
     // https://stackoverflow.com/questions/20711740/gtk2-g-thread-init-deprecated
-	// g_thread_init(NULL);
+	g_thread_init(NULL);
 
 	sshfs.blksize = 4096;
 	/* SFTP spec says all servers should allow at least 32k I/O */
