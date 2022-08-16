@@ -70,3 +70,15 @@ And you are ready to go.
 
 If checking out from git for the first time also do `autoreconf -i`
 before doing `./configure`.
+
+2022-08-16
+==========
+
+```bash
+brew install autoconf automake
+autoreconf -i
+./configure --prefix=$HOME/local
+make
+```
+
+Add `$HOME/local/bin` to `PATH`
